@@ -1,5 +1,6 @@
 defmodule BlogWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :blog
+  use ExDebugToolbar.Phoenix
 
   socket "/socket", BlogWeb.UserSocket
 

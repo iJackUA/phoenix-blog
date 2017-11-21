@@ -56,3 +56,16 @@ config :blog, Blog.Repo,
   database: "blog_dev",
   hostname: "localhost",
   pool_size: 10
+
+config :ex_debug_toolbar,
+  enable: true
+
+config :blog, BlogWeb.Endpoint,
+  instrumenters: [ExDebugToolbar.Collector.InstrumentationCollector]
+
+config :blog, Blog.Repo,
+  loggers: [ExDebugToolbar.Collector.EctoCollector, Ecto.LogEntry]
+
+config :phoenix, :template_engines,
+  eex: ExDebugToolbar.Template.EExEngine,
+  exs: ExDebugToolbar.Template.ExsEngine

@@ -20,7 +20,7 @@ defmodule Blog.Mixfile do
   def application do
     [
       mod: {Blog.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:ex_debug_toolbar, :logger, :runtime_tools]
     ]
   end
 
@@ -40,7 +40,12 @@ defmodule Blog.Mixfile do
       {:phoenix_html, "~> 2.10"},
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "~> 0.11"},
-      {:cowboy, "~> 1.0"}
+      {:cowboy, "~> 1.0"},
+      {:ex_debug_toolbar, "~> 0.4.0"},
+      {:timex, "~> 3.0"},
+      {:credo, "~> 0.3", only: [:dev, :test]},
+      {:trans, "~> 2.0"},
+      {:pot, "~>0.9.6"}
     ]
   end
 
