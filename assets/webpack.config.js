@@ -1,6 +1,7 @@
 var path = require('path')
 var webpack = require('webpack')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -98,6 +99,11 @@ if (process.env.NODE_ENV === 'production') {
       'process.env': {
         NODE_ENV: '"production"'
       }
+    }),
+    new CopyWebpackPlugin([
+      { from: './static', to: path.resolve(__dirname, '../priv/static') },
+    ], {
+      copyUnmodified: true
     }),
     new UglifyJsPlugin({
       sourceMap: true
