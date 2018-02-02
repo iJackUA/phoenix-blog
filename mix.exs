@@ -41,6 +41,7 @@ defmodule Blog.Mixfile do
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
+      {:cowlib, "~> 1.0.2", override: true},
       {:ex_debug_toolbar, "~> 0.4"},
       {:timex, "~> 3.0"},
       {:credo, "~> 0.3", only: [:dev, :test]},
