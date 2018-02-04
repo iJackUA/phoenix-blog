@@ -10,8 +10,8 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, '../priv/static/js'),
-    publicPath: '/dist/',
-    filename: '[name].build.js'
+    publicPath: '/js/',
+    filename: '[name].js'
   },
   module: {
     rules: [

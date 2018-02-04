@@ -16,11 +16,12 @@ defmodule BlogWeb.Router do
   scope "/", BlogWeb do
     pipe_through :browser # Use the default browser stack
 
-    get "/", PageController, :index
+    get "/", FrontController, :index
+    get "/admin", AdminController, :index
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", BlogWeb do
-  #   pipe_through :api
-  # end
+  scope "/api", BlogWeb do
+    pipe_through :api
+  end
 end
