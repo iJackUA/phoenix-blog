@@ -23,5 +23,6 @@ defmodule BlogWeb.Router do
   # Other scopes may use custom stacks.
   scope "/api", BlogWeb do
     pipe_through :api
+    resources "/posts", PostController, except: [:new, :edit]
   end
 end

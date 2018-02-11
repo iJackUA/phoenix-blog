@@ -1,0 +1,46 @@
+{
+	"info": {
+		"name": "StdOut.in API",
+		"_postman_id": "59346ccf-e5c2-d776-64e6-fc482f717bc0",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post [CREATE]",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"post\": \n\t{\n\t\t\"title\": \"Hi there #1\",\n\t\t\"status\": 1,\n\t\t\"category_id\": 1,\n\t\t\"short_text_md\": \"Short md ``` var ```\",\n\t\t\"short_text_html\": \"Short <b>HTML</b>\",\n\t\t\"full_text_md\": \"Full md ``` var ```\",\n\t\t\"full_text_html\": \"Full <b>HTML</b>\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/posts",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"posts"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"id": "793d7309-d0d0-40d4-81d6-d73f3fa60796",
+			"key": "url",
+			"value": "",
+			"type": "text"
+		}
+	]
+}
